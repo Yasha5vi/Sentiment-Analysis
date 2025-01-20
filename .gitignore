@@ -1,0 +1,8 @@
+Backend/training.1600000.processed.noemoticon.csv
+*.pdf
+*.doc
+*.docx
+node_modules/
+Backend/bnb.pickle
+Backend/lr.pickle
+Backend/vectoriser-ngram-(1,2).pickle

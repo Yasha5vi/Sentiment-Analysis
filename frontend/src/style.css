@@ -1,0 +1,191 @@
+body{
+    padding:0px;
+    margin:0px;
+    /* overflow:hidden; */
+}
+*{
+    box-sizing:border-box;
+}
+#root{
+    display:flex;
+    flex-direction:row;
+    height:100vh;
+    /* overflow:hidden; */
+}
+.sidebar{
+    width:10vw;
+    height:100%;
+}
+.rightSide{
+    width:90vw;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+.side,nav,.about-left,.about-right,.left,.right{
+    box-shadow:0px 0px 20px 0px rgb(172, 172, 172); 
+}
+.side,.about-right{
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+}
+
+.home{
+    display:flex;
+    flex-direction:row;
+    height:90vh;
+}
+
+.navbar{
+    height:10vh;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.about{
+    display:flex;
+    flex-drection:row;
+}
+
+.left{
+    width:40%;
+    height:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    flex-grow:1;
+}
+
+.right{
+    width:60%;
+    height:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    /* align-items:center;  */
+    overflow-y:auto;
+    overflow-x:auto;
+    box-sizing:border-box;
+    font-size:0.9em;
+}
+
+.right::-webkit-scrollbar {
+    width: 8px;
+}
+
+.right::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.rightInside{
+    display:flex;
+    flex-direction:column;
+    /* justify-content:center; */
+    align-items:center; 
+}
+
+.tweet{
+    padding:2%;
+    width:95%;
+    border:2px solid rgba(177, 177, 177, 0.26);
+    box-shadow:0px 0px 15px 0px rgb(245, 245, 245); 
+}
+
+.temp{
+    padding:1%;
+}
+
+.form{
+    width:70%;
+    display:flex;
+    flex-direction:column;
+    box-shadow:0px 0px 20px 0px rgba(223, 223, 223, 0.72); 
+}
+
+input{
+    border:1px solid rgb(163, 163, 163);
+}
+input:focus{
+    outline:2px solid rgb(106, 183, 255);
+    border:0px;
+}
+
+.graph{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:600px;
+    height:300px;
+}
+
+.bton{
+    margin-left:auto;
+}
+
+
+/*loader */
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Fullscreen height for centering */
+    width:50%;
+    /* background: linear-gradient(135deg, #e0e0e0, #ffffff); Subtle gradient background */
+}
+
+.loader-wheel {
+    width: 70px;
+    height: 70px;
+    border: 8px solid rgba(0, 0, 255, 0.2); /* Light border */
+    border-top: 8px solid rgba(0, 0, 255, 0.8); /* Bold top border */
+    border-radius: 50%; /* Circular shape */
+    animation: spin 1.2s linear infinite; /* Spinning animation */
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.4); /* Glow effect */
+}
+
+/* Animation for spinning */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Add a pulsating glow for a fabulous effect */
+.loader-wheel::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(0, 0, 255, 0.1);
+    animation: pulse 1.5s infinite;
+}
+
+/* Pulsing animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
