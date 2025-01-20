@@ -98,7 +98,7 @@ def fetch_twitter_data(hashtag):
     }
     headers = {
         "content-type": "application/json",
-        "X-RapidAPI-Key": "15b6a1de15msh9a321f1f3a22b53p184441jsn6f7c191a28c0",
+        "X-RapidAPI-Key": "",
         "X-RapidAPI-Host": "twitter154.p.rapidapi.com"
     }
     try:
